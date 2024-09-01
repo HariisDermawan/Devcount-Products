@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-3 transition-all duration-300 ease-in-out border-gray-200 shadow-lg backdrop-filter backdrop-blur dark:border-gray-700 rounded-b-3xl">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/dist/backgrond/dev.png" class="h-8" alt="Flowbite Logo" />
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                    <li>
+                        <a href="index.html"
+                            class="block px-3 py-2 font-bold text-white rounded-t-md md:p-0 dark:text-white "
+                            aria-current="page">Home</a>
+                    </li>
+        
+                    <li class="relative block px-3 py-2 text-white rounded-t-md md:bg-transparent md:p-0 dark:text-white ">
+                        <button id="menu-button" class="flex items-center gap-1 focus:text-belibang-light-grey">
+                            <span>Categories</span>
+                            <img src="/dist/icons/up2.svg" alt="icon" class="w-[auto] h-[7px] mt-1">
+                        </button>
+                        <div id="dropdown-menu"
+                            class="hidden absolute top-[52px] md:top-[52px] grid grid-cols-2 p-4 gap-[10px] w-[526px] rounded-[20px] bg-[#191818] border border-[#414141] z-10">
+                            <!-- Item 1: All Products -->
+                            <div class="col-span-2 flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300 w-full">
+                                <div class="flex items-center w-full">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/basket.svg" alt="Icon Dashboard">
+                                    </a>
+                                    <a href="#" class="flex flex-col w-full ml-4">
+                                        <p class="text-sm font-bold text-white">All Products</p>
+                                        <p class="text-xs text-belibang-grey">Everything in One Place</p>
+                                    </a>
+                                </div>
+                                <div class="flex w-6 h-6 shrink-0">
+                                    <img src="/dist/icons/king2.svg" alt="icon">
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/leptop.svg" alt="Icon Settings">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Templates</p>
+                                        <p class="text-xs text-belibang-grey">Designs Made Easy</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/list.svg" alt="Icon Earnings" class="w-auto h-[50px]">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Courses</p>
+                                        <p class="text-xs text-belibang-grey">Expand Your Skills</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/book.svg" alt="Icon Courses" class="w-auto h-[50px]">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Ebooks</p>
+                                        <p class="text-xs text-belibang-grey">Read and Learn</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/pen.svg" alt="Icon Ebooks" class="w-auto h-[50px]">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Fonts</p>
+                                        <p class="text-xs text-belibang-grey">Typography Selection</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-3 py-2 text-white rounded-t-md md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent">Products</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-3 py-2 text-white rounded-t-md md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent">Features</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-3 py-2 text-white rounded-t-md md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                    </li>
+                    <!-- Sign Up button for mobile -->
+                    <li class="md:hidden">
+                        <a href="#"
+                            class="block px-3 py-2 text-sm font-semibold text-left text-white border border-gray-200 rounded-full dark:border-gray-600">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sign Up button for desktop -->
+            <div class="hidden md:block">
+                <button type="button" class="px-5 py-3 mb-2 text-sm font-bold text-gray-900 border border-gray-200 rounded-full me-2 focus:outline-none hover:text-white-700 focus:z-10 dark:text-gray-400 dark:border-gray-600 ">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </nav>
+     <!-- end -->
+
+     <!-- seccess-checkout -->
+     <section id="Success" class="container max-w-full px-4 mx-auto">
+        <div class="w-full flex items-center justify-center min-h-[calc(100vh-74px)]">
+            <div class="flex flex-col items-center gap-16 md:gap-20">
+                <div class="flex flex-col items-center">
+                    <div class="relative flex shrink-0 w-44 h-44 -z-10">
+                        <img src="../assets/images/icons/check-3d.svg" alt="icon">
+                        <div class="flex shrink-0 w-[644px] absolute -translate-x-1/2 left-1/2 bottom-[35px] z-0">
+                            <img src="../assets/images/backgrounds/glitter.svg" alt="background">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-1 text-center">
+                        <p class="font-semibold text-2xl sm:text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">
+                            Success Checkout
+                        </p>
+                        <p class="text-xs sm:text-sm text-belibang-grey">Thank you for supporting our great creators</p>
+                    </div>
+                </div>
+                <a href="index.html"
+                    class="w-full max-w-xs text-white h-12 flex items-center justify-center rounded-full text-center bg-[#2D68F8] px-4 py-2 font-semibold hover:bg-[#083297] active:bg-[#062162] transition-all duration-300">
+                    Check My Transactions
+                </a>
+            </div>
+        </div>
+    </section>
+    
+     <!-- end -->
+    
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            menuButton.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                dropdownMenu.classList.toggle('hidden');
+            });
+            document.addEventListener('click', (event) => {
+                if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

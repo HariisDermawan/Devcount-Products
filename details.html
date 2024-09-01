@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="dist/icons/ics.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-3 transition-all duration-300 ease-in-out border-gray-200 shadow-lg backdrop-filter backdrop-blur dark:border-gray-700 rounded-b-3xl">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="dist/backgrond/dev.png" class="h-8" alt="Flowbite Logo" />
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                    <li>
+                        <a href="index.html"
+                            class="block px-3 py-2 font-bold text-white rounded-t-md md:p-0 dark:text-yellow-400 "
+                            aria-current="page">Home</a>
+                    </li>
+        
+                    <li class="relative block px-3 py-2 text-white rounded-t-md md:bg-transparent md:p-0 dark:text-white hover:text-yellow-400 ">
+                        <button id="menu-button" class="flex items-center gap-1 focus:text-belibang-light-grey">
+                            <span>Categories</span>
+                            <img src="dist/icons/up2.svg" alt="icon" class="w-[auto] h-[7px] mt-1">
+                        </button>
+                        <div id="dropdown-menu"
+                            class="hidden absolute top-[52px] md:top-[52px] grid grid-cols-2 p-4 gap-[10px] w-[526px] rounded-[20px] bg-[#191818] border border-[#414141] z-10">
+                            <!-- Item 1: All Products -->
+                            <div class="col-span-2 flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300 w-full">
+                                <div class="flex items-center w-full">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="dist/icons/basket.svg" alt="Icon Dashboard">
+                                    </a>
+                                    <a href="#" class="flex flex-col w-full ml-4">
+                                        <p class="text-sm font-bold text-white">All Products</p>
+                                        <p class="text-xs text-belibang-grey">Everything in One Place</p>
+                                    </a>
+                                </div>
+                                <div class="flex w-6 h-6 shrink-0">
+                                    <img src="dist/icons/king2.svg" alt="icon">
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="dist/icons/leptop.svg" alt="Icon Settings">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Templates</p>
+                                        <p class="text-xs text-belibang-grey">Designs Made Easy</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="dist/icons/list.svg" alt="Icon Earnings" class="w-auto h-[50px]">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Courses</p>
+                                        <p class="text-xs text-belibang-grey">Expand Your Skills</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="dist/icons/book.svg" alt="Icon Courses" class="w-auto h-[50px]">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Ebooks</p>
+                                        <p class="text-xs text-belibang-grey">Read and Learn</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="dist/icons/pen.svg" alt="Icon Ebooks" class="w-auto h-[50px]">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Fonts</p>
+                                        <p class="text-xs text-belibang-grey">Typography Selection</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="details.html"
+                            class="block px-3 py-2 text-white hover:text-yellow-400 rounded-t-md md:border-0 md:p-0 dark:text-white dark:hover:text-yellow-400 ">Products</a>
+                    </li>
+                    <li>
+                        <a href="index.html"
+                            class="block px-3 py-2 text-white hover:text-yellow-400 rounded-t-md md:border-0 md:p-0 dark:text-white dark:hover:text-yellow-400 ">Features</a>
+                    </li>
+                    <li>
+                        <a href="index.html"
+                            class="block px-3 py-2 hover:text-yellow-400 rounded-t-md md:border-0 md:p-0 dark:text-white dark:hover:text-yellow-400 ">About</a>
+                    </li>
+                    <!-- Sign Up button for mobile -->
+                    <li class="md:hidden">
+                        <a href="#"
+                            class="block px-3 py-2 text-sm font-semibold text-left text-white border border-gray-200 rounded-full hover:text-yellow-400 dark:border-gray-600">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sign Up button for desktop -->
+            <div class="hidden md:block">
+                <button type="button" class="px-5 py-3 mb-2 text-sm font-bold text-gray-900 border border-gray-200 rounded-full text-yello-400 me-2 focus:outline-none hover:text-yellow-400 focus:z-10 dark:text-gray-400 dark:border-gray-600 ">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- end -->
+
+    <!-- hero -->
+    <header class="w-full pt-[74px] pb-[103px] relative z-0 mt-9">
+        <div class="container max-w-[1130px] mx-auto flex flex-col items-center justify-center z-10">
+            <div class="z-10 flex flex-col gap-4 mt-7">
+                <p class="bg-[#2A2A2A] font-semibold text-belibang-grey rounded-[4px] p-[8px_16px] text-white w-fit">Template</p>
+                <h1 class="font-semibold text-white text-[55px]">Huis Elite: The Complete Smart Home App UI Kit for Modern Living
+                </h1>
+            </div>
+        </div>
+        <div class="absolute top-0 z-0 w-full h-full overflow-hidden background-image">
+            <img src="dist/backgrond/koc.png" class="object-cover w-full h-full" alt="hero image">
+        </div>
+        <div class="absolute bottom-0 z-0 w-full h-1/3 bg-gradient-to-b from-belibang-black/0 to-belibang-black"></div>
+        <div class="absolute top-0 z-0 w-full h-full bg-belibang-black/95"></div>
+    </header>
+     <!-- end -->
+
+     <section id="DetailsContent" class="container max-w-full md:max-w-[1130px] mx-auto mb-8 relative md:-top-[70px]">
+        <div class="flex flex-col gap-8">
+            <!-- Hero Image -->
+            <div class="w-full md:w-[1130px] h-[400px] md:h-[700px] flex rounded-[20px] overflow-hidden">
+                <img src="dist/image/5.png" class="object-cover w-full h-full" alt="hero image">
+            </div>
+            <div class="flex flex-col md:flex-row gap-8 relative md:-mt-[93px]">
+                <!-- Overview Section -->
+                <div class="flex flex-col p-5 md:p-[30px] gap-5 bg-[#1f1f1f] text-white rounded-[20px] w-full md:w-[700px] h-fit mt-[60px] md:mt-[90px]">
+                    <div class="flex flex-col gap-4">
+                        <p class="text-lg font-semibold md:text-xl">Overview</p>
+                        <p class="leading-7 text-belibang-grey">Introducing our cutting-edge UI/UX template, designed for creatives and professionals looking to elevate their digital presence. Crafted with precision, this template offers a harmonious blend of aesthetics and functionality, ensuring an intuitive and engaging user experience. Its sleek, modern design is fully customizable, allowing you to tailor every element to fit your brand's identity perfectly.</p>
+                        <div class="flex flex-wrap gap-2 mt-1">
+                            <!-- Logos -->
+                            <a href="" class="w-9 h-9 flex justify-center items-center rounded-full overflow-hidden border border-[#414141]">
+                                <img src="dist/icons/python.svg" class='p-[5px]' alt="logo">
+                            </a>
+                            <a href="" class="w-9 h-9 flex justify-center items-center rounded-full overflow-hidden border border-[#414141]">
+                                <img src="dist/icons/figma.svg" class='p-[5px]' alt="logo">
+                            </a>
+                            <a href="" class="w-9 h-9 flex justify-center items-center rounded-full overflow-hidden border border-[#414141]">
+                                <img src="dist/icons/laravel.svg" class='p-[5px]' alt="logo">
+                            </a>
+                            <a href="" class="w-9 h-9 flex justify-center items-center rounded-full overflow-hidden border border-[#414141]">
+                                <img src="dist/icons/linux.svg" class='p-[5px]' alt="logo">
+                            </a>
+                            <a href="" class="w-9 h-9 flex justify-center items-center rounded-full overflow-hidden border border-[#414141]">
+                                <img src="dist/icons/aws.svg" class='p-[5px]' alt="logo">
+                            </a>
+                            <a href="" class="w-9 h-9 flex justify-center items-center rounded-full overflow-hidden border border-[#414141]">
+                                <img src="dist/icons/flutter.svg" class='p-[5px]' alt="logo">
+                            </a>
+                            <a href="" class="w-9 h-9 flex justify-center items-center rounded-full overflow-hidden border border-[#414141]">
+                                <img src="dist/icons/php.svg" class='p-[5px]' alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 mt-4">
+                        <!-- Tags -->
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">bank</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">finance</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">mobile</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">money</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">personal</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">scan</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">template</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">transfer</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">ui kit</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">UX</a>
+                        <a href="" class="tags p-2 border border-[#414141] rounded text-xs text-belibang-light-grey hover:bg-[#2A2A2A] transition-all duration-300">wallet</a>
+                    </div>
+                </div>
+                <!-- Pricing Section -->
+                <div class="flex flex-col w-full md:w-[366px] gap-6 flex-nowrap overflow-visible">
+                    <!-- Pricing Card -->
+                    <div class=" rounded-[20px] flex w-full h-fit border border-yellow-400">
+                        <div class="w-full p-7 md:p-[28px] bg-[#1f1f1f] text-white rounded-[20px] flex flex-col gap-6">
+                            <div class="flex flex-col gap-3">
+                                <p class="font-semibold text-3xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">Rp 6,288,000</p>
+                                <div class="flex flex-col gap-2">
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex w-4 h-4">
+                                            <img src="dist/icons/ceklis.svg" alt="icon">
+                                        </div>
+                                        <p class="text-belibang-grey">100% Original Content</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex w-4 h-4">
+                                            <img src="dist/icons/ceklis.svg" alt="icon">
+                                        </div>
+                                        <p class="text-belibang-grey">Lifetime Support</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex w-4 h-4">
+                                            <img src="dist/icons/ceklis.svg" alt="icon">
+                                        </div>
+                                        <p class="text-belibang-grey">High-Performance Code</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex w-4 h-4">
+                                            <img src="dist/icons/ceklis.svg" alt="icon">
+                                        </div>
+                                        <p class="text-belibang-grey">Customizable Themes</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex w-4 h-4">
+                                            <img src="dist/icons/ceklis.svg" alt="icon">
+                                        </div>
+                                        <p class="text-belibang-grey">Responsive Design</p>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="flex w-4 h-4">
+                                            <img src="dist/icons/ceklis.svg" alt="icon">
+                                        </div>
+                                        <p class="text-belibang-grey">Comprehensive Documentation</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="checkout.html" class="bg-[#2D68F8] text-center font-semibold p-3 rounded-full hover:bg-[#083297] active:bg-[#062162] transition-all duration-300">Checkout</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Author Card -->
+                    <div class="w-full p-6 md:p-[30px] bg-[#1f1f1f] text-white rounded-[20px] flex flex-col gap-4 h-fit border border-yellow-400">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="flex w-12 h-12 overflow-hidden rounded-full">
+                                    <img src="dist/icons/ics.png" alt="icon">
+                                </div>
+                                <div class="flex flex-col gap-1">
+                                    <p class="font-semibold">Devcount</p>
+                                    <p class="text-[#595959] text-sm leading-[18px]">
+                                        <span class="mr-1 font-semibold">183,409</span>Product
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="">
+                                <img src="dist/icons/right.svg" alt="icon" class="w-[auto] h-[20px]">
+                            </a>
+                        </div>
+                        <p class="text-sm leading-6 text-belibang-grey">A young UI/UX Designer from Indonesia. Specialized in mobile apps designs & loves creating UI Kit 🇮🇩</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="NewProduct" class="container max-w-[1130px] text-white mx-auto mb-[102px] flex flex-col gap-8">
+        <h2 class="font-semibold text-[32px]">More Product</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[22px]">
+            <!-- Card 1 -->
+            <div class="product-card flex flex-col rounded-[18px] bg-[#1f1f1f] overflow-hidden border border-transparent hover:border-yellow-500 focus-within:border-[#2D68F8] transition-all duration-300">
+                <a href="" class="thumbnail w-full h-[180px] flex shrink-0 overflow-hidden relative">
+                    <img src="dist/image/sempel5.jpg" class="object-cover w-full h-full" alt="thumbnail">
+                    <p class="backdrop-blur bg-black/30 rounded-[4px] p-[4px_8px] absolute top-3 right-3 z-10">Rp 129,000</p>
+                </a>
+                <div class="p-[10px_14px_12px] h-full flex flex-col justify-between gap-[14px]">
+                    <div class="flex flex-col gap-1">
+                        <a href="" class="font-semibold line-clamp-2 hover:line-clamp-none">SaaS Website Master Template: Streamline Your Digital Solution</a>
+                        <p class="bg-[#2A2A2A] font-semibold text-xs text-belibang-grey rounded-[4px] p-[4px_6px] w-fit">Template</p>
+                    </div>
+                    <div class="flex items-center gap-[6px]">
+                        <div class="flex items-center justify-center w-6 h-6 overflow-hidden rounded-full shrink-0">
+                            <img src="dist/image/usr.png" class="object-cover w-full h-full" alt="logo">
+                        </div>
+                        <a href="" class="text-xs font-semibold text-belibang-grey">Framer</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="product-card flex flex-col rounded-[18px] bg-[#1f1f1f] overflow-hidden border border-transparent hover:border-yellow-500 focus-within:border-[#2D68F8] transition-all duration-300">
+                <a href="" class="thumbnail w-full h-[180px] flex shrink-0 overflow-hidden relative">
+                    <img src="dist/image/sempel5.jpg"" class="object-cover w-full h-full" alt="thumbnail">
+                    <p class="backdrop-blur bg-black/30 rounded-[4px] p-[4px_8px] absolute top-3 right-3 z-10">Rp 149,000</p>
+                </a>
+                <div class="p-[10px_14px_12px] h-full flex flex-col justify-between gap-[14px]">
+                    <div class="flex flex-col gap-1">
+                        <a href="" class="font-semibold line-clamp-2 hover:line-clamp-none">E-Commerce Website Template: Boost Your Online Store</a>
+                        <p class="bg-[#2A2A2A] font-semibold text-xs text-belibang-grey rounded-[4px] p-[4px_6px] w-fit">Template</p>
+                    </div>
+                    <div class="flex items-center gap-[6px]">
+                        <div class="flex items-center justify-center w-6 h-6 overflow-hidden rounded-full shrink-0">
+                            <img src="dist/image/usr.png" class="object-cover w-full h-full" alt="logo">
+                        </div>
+                        <a href="" class="text-xs font-semibold text-belibang-grey">React</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="product-card flex flex-col rounded-[18px] bg-[#1f1f1f] overflow-hidden border border-transparent hover:border-yellow-500 focus-within:border-[#2D68F8] transition-all duration-300">
+                <a href="" class="thumbnail w-full h-[180px] flex shrink-0 overflow-hidden relative">
+                    <img src="dist/image/sempel5.jpg"" class="object-cover w-full h-full" alt="thumbnail">
+                    <p class="backdrop-blur bg-black/30 rounded-[4px] p-[4px_8px] absolute top-3 right-3 z-10">Rp 159,000</p>
+                </a>
+                <div class="p-[10px_14px_12px] h-full flex flex-col justify-between gap-[14px]">
+                    <div class="flex flex-col gap-1">
+                        <a href="" class="font-semibold line-clamp-2 hover:line-clamp-none">Landing Page Template: Capture Your Audience</a>
+                        <p class="bg-[#2A2A2A] font-semibold text-xs text-belibang-grey rounded-[4px] p-[4px_6px] w-fit">Template</p>
+                    </div>
+                    <div class="flex items-center gap-[6px]">
+                        <div class="flex items-center justify-center w-6 h-6 overflow-hidden rounded-full shrink-0">
+                            <img src="dist/image/usr.png" class="object-cover w-full h-full" alt="logo">
+                        </div>
+                        <a href="" class="text-xs font-semibold text-belibang-grey">Vue</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="product-card flex flex-col rounded-[18px] bg-[#1f1f1f] overflow-hidden border border-transparent hover:border-yellow-500 focus-within:border-[#2D68F8] transition-all duration-300">
+                <a href="" class="thumbnail w-full h-[180px] flex shrink-0 overflow-hidden relative">
+                    <img src="dist/image/sempel5.jpg"" class="object-cover w-full h-full" alt="thumbnail">
+                    <p class="backdrop-blur bg-black/30 rounded-[4px] p-[4px_8px] absolute top-3 right-3 z-10">Rp 169,000</p>
+                </a>
+                <div class="p-[10px_14px_12px] h-full flex flex-col justify-between gap-[14px]">
+                    <div class="flex flex-col gap-1">
+                        <a href="" class="font-semibold line-clamp-2 hover:line-clamp-none">Mobile App Template: Design Your App Interface</a>
+                        <p class="bg-[#2A2A2A] font-semibold text-xs text-belibang-grey rounded-[4px] p-[4px_6px] w-fit">Template</p>
+                    </div>
+                    <div class="flex items-center gap-[6px]">
+                        <div class="flex items-center justify-center w-6 h-6 overflow-hidden rounded-full shrink-0">
+                            <img src="dist/image/usr.png" class="object-cover w-full h-full" alt="logo">
+                        </div>
+                        <a href="" class="text-xs font-semibold text-belibang-grey">Angular</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="Testimonial" class="mb-[102px] flex flex-col gap-8 text-white">
+        <div class="container max-w-[1130px] mx-auto flex justify-between items-center">
+            <h2 class="font-semibold text-[32px]">Customers Are Happy <br>With Our Products</h2>
+            <div class="flex gap-[14px] items-center">
+                <button class="flex items-center justify-center w-10 h-10 text-white bg-[#272727] rounded-full btn-prev shrink-0 hover:bg-[#303030]">
+                    <img src="dist/icons/kiri.svg" alt="Previous" class="w-5 h-5">
+                </button>
+                <button class="flex items-center justify-center w-10 h-10 text-white bg-[#272727] rounded-full btn-next shrink-0 hover:bg-[#303030]">
+                    <img src="dist/icons/kanan.svg" alt="Next" class="w-5 h-5">
+                </button>
+            </div>
+        </div>
+        <div class="w-full overflow-x-hidden">
+            <div class="flex gap-5 transition-transform duration-300 testi-carousel">
+                <!-- Testimonial Card 1 -->
+                <div class="testimonial-card bg-[#1f1f1f] rounded-[20px] flex mr-5 w-[420px] min-h-[256px] flex-shrink-0 overflow-hidden">
+                    <div class="p-6 flex flex-col w-full gap-[42px] bg-[url('../assets/images/backgrounds/Testimonials-image.png')] bg-contain bg-no-repeat bg-top">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-[6px]">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                            </div>
+                            <p class="leading-[26px]">Using these templates has boosted my productivity significantly. Highly recommended for all designers!</p>
+                        </div>
+                        <div class="flex gap-[14px] items-center">
+                            <div class="flex w-12 h-12 overflow-hidden rounded-full shrink-0">
+                                <img src="dist/image/usr2.png" class="object-cover w-full h-full" alt="photo">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="font-semibold text-left leading-[170%] bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">Sarah Lopez</p>
+                                <p class="text-xs font-semibold text-left text-belibang-grey">Brand Design Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 2 -->
+                <div class="testimonial-card bg-[#1f1f1f] rounded-[20px] flex mr-5 w-[420px] min-h-[256px] flex-shrink-0 overflow-hidden">
+                    <div class="p-6 flex flex-col w-full gap-[42px] bg-[url('../assets/images/backgrounds/Testimonials-image.png')] bg-contain bg-no-repeat bg-top">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-[6px]">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                            </div>
+                            <p class="leading-[26px]">Using these templates has boosted my productivity significantly. Highly recommended for all designers!</p>
+                        </div>
+                        <div class="flex gap-[14px] items-center">
+                            <div class="flex w-12 h-12 overflow-hidden rounded-full shrink-0">
+                                <img src="dist/image/usr2.png" class="object-cover w-full h-full" alt="photo">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="font-semibold text-left leading-[170%] bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">Michael Chen</p>
+                                <p class="text-xs font-semibold text-left text-belibang-grey">UI/UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 3 -->
+                <div class="testimonial-card bg-[#1f1f1f] rounded-[20px] flex mr-5 w-[420px] min-h-[256px] flex-shrink-0 overflow-hidden">
+                    <div class="p-6 flex flex-col w-full gap-[42px] bg-[url('../assets/images/backgrounds/Testimonials-image.png')] bg-contain bg-no-repeat bg-top">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-[6px]">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                            </div>
+                            <p class="leading-[26px]">Using these templates has boosted my productivity significantly. Highly recommended for all designers!</p>
+                        </div>
+                        <div class="flex gap-[14px] items-center">
+                            <div class="flex w-12 h-12 overflow-hidden rounded-full shrink-0">
+                                <img src="dist/image/usr2.png" class="object-cover w-full h-full" alt="photo">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="font-semibold text-left leading-[170%] bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">Emily Robinson</p>
+                                <p class="text-xs font-semibold text-left text-belibang-grey">Senior Graphic Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial Card 4 -->
+                <div class="testimonial-card bg-[#1f1f1f] rounded-[20px] flex mr-5 w-[420px] min-h-[256px] flex-shrink-0 overflow-hidden">
+                    <div class="p-6 flex flex-col w-full gap-[42px] bg-[url('../assets/images/backgrounds/Testimonials-image.png')] bg-contain bg-no-repeat bg-top">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-[6px]">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                                <img src="dist/icons/bintang.svg" alt="star" class="w-5 h-5">
+                            </div>
+                            <p class="leading-[26px]">Using these templates has boosted my productivity significantly. Highly recommended for all designers!</p>
+                        </div>
+                        <div class="flex gap-[14px] items-center">
+                            <div class="flex w-12 h-12 overflow-hidden rounded-full shrink-0">
+                                <img src="dist/image/usr2.png" class="object-cover w-full h-full" alt="photo">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="font-semibold text-left leading-[170%] bg-clip-text text-transparent bg-gradient-to-r from-[#B05CB0] to-[#FCB16B]">Sarah Lopez</p>
+                                <p class="text-xs font-semibold text-left text-belibang-grey">Brand Design Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- footer -->
+    <footer class="w-full">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="py-20">
+            <a href="" class="flex justify-center ">
+               <img src="dist/backgrond/dev.png" alt="">
+            </a>
+            <div class="py-8 text-center">
+                <h3 class="mb-4 text-3xl font-bold text-white font-manrope">Having revenue problem? We’ve got skills.</h3>
+                <p class="text-gray-300">Joined over 400+ startups already growing with pagedone. what's holding you back?</p>
+            </div> 
+            
+            </div>
+            <div class="border-t border-gray-200 py-7">
+                <div class="flex flex-col items-center justify-center gap-7 lg:justify-between lg:flex-row">
+                    <span class="text-sm text-gray-500 ">©<a href="index.html"> Devcount</a> 2024, All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!-- end -->
+    
+    
+    
+    
+
+    <!-- product -->
+  
+     <!-- end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const prevButton = document.querySelector('.btn-prev');
+    const nextButton = document.querySelector('.btn-next');
+    const carousel = document.querySelector('.testi-carousel');
+    const cardWidth = 420; // Width of one testimonial card in pixels
+    const cardMargin = 20; // Margin between cards in pixels
+    let scrollAmount = 0;
+
+    prevButton.addEventListener('click', () => {
+        scrollAmount -= (cardWidth + cardMargin);
+        scrollAmount = Math.max(scrollAmount, 0); // Prevent scrolling beyond start
+        carousel.style.transform = `translateX(-${scrollAmount}px)`;
+    });
+
+    nextButton.addEventListener('click', () => {
+        scrollAmount += (cardWidth + cardMargin);
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        scrollAmount = Math.min(scrollAmount, maxScroll); // Prevent scrolling beyond end
+        carousel.style.transform = `translateX(-${scrollAmount}px)`;
+    });
+});
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            menuButton.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                dropdownMenu.classList.toggle('hidden');
+            });
+            document.addEventListener('click', (event) => {
+                if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

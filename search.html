@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-3 transition-all duration-300 ease-in-out border-gray-200 shadow-lg backdrop-filter backdrop-blur dark:border-gray-700 rounded-b-3xl">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/dist/backgrond/dev.png" class="h-8" alt="Flowbite Logo" />
+            </a>
+            <button data-collapse-toggle="navbar-dropdown" type="button"
+                class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:focus:ring-gray-600"
+                aria-controls="navbar-dropdown" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                    <li>
+                        <a href="#"
+                            class="block px-3 py-2 font-bold text-white rounded-t-md md:p-0 dark:text-white "
+                            aria-current="page">Home</a>
+                    </li>
+        
+                    <li class="relative block px-3 py-2 text-white rounded-t-md md:bg-transparent md:p-0 dark:text-white ">
+                        <button id="menu-button" class="flex items-center gap-1 focus:text-belibang-light-grey">
+                            <span>Categories</span>
+                            <img src="/dist/icons/up2.svg" alt="icon" class="w-[auto] h-[7px] mt-1">
+                        </button>
+                        <div id="dropdown-menu"
+                            class="hidden absolute top-[52px] md:top-[52px] grid grid-cols-2 p-4 gap-[10px] w-[526px] rounded-[20px] bg-[#191818] border border-[#414141] z-10">
+                            <!-- Item 1: All Products -->
+                            <div class="col-span-2 flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300 w-full">
+                                <div class="flex items-center w-full">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/basket.svg" alt="Icon Dashboard">
+                                    </a>
+                                    <a href="#" class="flex flex-col w-full ml-4">
+                                        <p class="text-sm font-bold text-white">All Products</p>
+                                        <p class="text-xs text-belibang-grey">Everything in One Place</p>
+                                    </a>
+                                </div>
+                                <div class="flex w-6 h-6 shrink-0">
+                                    <img src="/dist/icons/king2.svg" alt="icon">
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/leptop.svg" alt="Icon Settings">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Templates</p>
+                                        <p class="text-xs text-belibang-grey">Designs Made Easy</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/list.svg" alt="Icon Earnings" class="w-auto h-[50px]">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Courses</p>
+                                        <p class="text-xs text-belibang-grey">Expand Your Skills</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/book.svg" alt="Icon Courses" class="w-auto h-[50px]">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Ebooks</p>
+                                        <p class="text-xs text-belibang-grey">Read and Learn</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="flex justify-between items-center rounded-2xl p-4 border border-[#414141] hover:bg-[#303030] transition-all duration-300">
+                                <div class="flex items-center">
+                                    <a href="#" class="w-[58px] h-[58px] flex shrink-0 items-center">
+                                        <img src="/dist/icons/pen.svg" alt="Icon Ebooks" class="w-auto h-[50px]">
+                                    </a>
+                                    <a href="#" class="flex flex-col">
+                                        <p class="text-sm font-bold text-white">Fonts</p>
+                                        <p class="text-xs text-belibang-grey">Typography Selection</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-3 py-2 text-white rounded-t-md md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent">Products</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-3 py-2 text-white rounded-t-md md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent">Features</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block px-3 py-2 text-white rounded-t-md md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 dark:text-white dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                    </li>
+                    <!-- Sign Up button for mobile -->
+                    <li class="md:hidden">
+                        <a href="#"
+                            class="block px-3 py-2 text-sm font-semibold text-left text-white border border-gray-200 rounded-full dark:border-gray-600">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Sign Up button for desktop -->
+            <div class="hidden md:block">
+                <button type="button" class="px-5 py-3 mb-2 text-sm font-bold text-gray-900 border border-gray-200 rounded-full me-2 focus:outline-none hover:text-white-700 focus:z-10 dark:text-gray-400 dark:border-gray-600 ">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </nav>
+     <!-- end -->
+
+     <!-- hero section -->
+     <header class="w-full mt-20 pt-[74px] pb-[34px] bg-[url('/dist/backgrond/koc.png')] bg-cover bg-no-repeat bg-center relative z-0">
+     <div class="container max-w-[1130px] mx-auto flex flex-col items-center justify-center gap-[34px] z-10">
+         <div class="z-10 flex flex-col gap-2 mt-20 text-center w-fit">
+             <h1 class="font-semibold text-[60px] leading-[130%] text-white">Search</h1>
+         </div>
+         <div class="flex w-full justify-center mb-[34px] z-10">
+            <form class="relative p-3 bg-darker-grey max-w-[560px] w-full rounded-full transition-all duration-300">
+                <button type="button" class="absolute inset-y-0 left-0 flex items-center px-4">
+                    <img src="/dist/icons/search.svg" alt="Search Icon" class="w-[auto] h-[30px]">
+                </button>
+                <input type="text" id="searchInput"
+                    class="bg-darker-grey w-full pl-12 pr-10 focus:outline-none placeholder:text-[#595959] rounded-full"
+                    placeholder="Type anything to search..." />
+                <input type="reset" id="resetButton"
+                    class="hidden w-9 h-9 absolute top-1/2 right-3 transform -translate-y-1/2 bg-[url('/dist/backgrond/koc.png')] bg-no-repeat bg-center hover:bg-[url('../assets/images/icons/close-white.svg')] transition-all duration-300"
+                    value="" />
+            </form>
+        </div>
+     </div>
+     <div class="absolute top-0 z-0 w-full h-full bg-gradient-to-b from-belibang-black/70 to-belibang-black"></div>
+     </header>
+      <!-- end -->
+
+       <!-- product -->
+    <section id="NewProduct" class="container text-white max-w-[1130px] mx-auto mb-[102px] flex flex-col gap-8">
+        <h2 class="font-semibold text-[32px] text-center md:text-left">Results</h2>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Kartu 1 -->
+            <div class="product-card flex flex-col rounded-[18px] bg-[#232323] border-2 border-transparent shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer focus:border-blue-500 outline-none"
+                tabindex="0" data-aos="fade-up" data-aos-duration="1000">
+                <a href="details.html" class="thumbnail w-full h-[180px] sm:h-[220px] md:h-[240px] lg:h-[260px] flex shrink-0 overflow-hidden relative rounded-[18px]">
+                    <img src="/dist/image/5.png" class="object-cover w-full h-full rounded-[18px]" alt="thumbnail">
+                    <p class="backdrop-blur bg-white/30 text-white rounded-[4px] p-[4px_8px] absolute top-3 right-[14px] z-10">
+                        Rp 129,000
+                    </p>
+                </a>
+                <div class="p-[10px_14px_12px] flex flex-col justify-between gap-[14px]">
+                    <div class="flex flex-col gap-1">
+                        <a href="details.html" class="font-semibold line-clamp-2 hover:line-clamp-none">
+                            SaaS Website Master Template: Streamline Your Digital Solution
+                        </a>
+                        <p class="bg-[#484848] font-semibold text-xs rounded-[4px] p-[4px_6px] w-fit">
+                            Template
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-[6px]">
+                        <div class="w-10 h-10 overflow-hidden border border-gray-200 rounded-full">
+                            <img src="/dist/image/5.png" class="object-cover w-full h-full rounded-full" alt="logo">
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-gray-200">Framer</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Kartu 2 -->
+            <div class="product-card flex flex-col rounded-[18px] bg-[#232323] border-2 border-transparent shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer focus:border-blue-500 outline-none"
+                tabindex="0" data-aos="fade-up" data-aos-duration="1000">
+                <a href="details.html" class="thumbnail w-full h-[180px] sm:h-[220px] md:h-[240px] lg:h-[260px] flex shrink-0 overflow-hidden relative rounded-[18px]">
+                    <img src="/dist/image/sempel5.jpg" class="object-cover w-full h-full rounded-[18px]" alt="thumbnail">
+                    <p class="backdrop-blur bg-white/30 text-white rounded-[4px] p-[4px_8px] absolute top-3 right-[14px] z-10">
+                        Rp 149,000
+                    </p>
+                </a>
+                <div class="p-[10px_14px_12px] flex flex-col justify-between gap-[14px]">
+                    <div class="flex flex-col gap-1">
+                        <a href="details.html" class="font-semibold line-clamp-2 hover:line-clamp-none">
+                            E-Commerce Website Template: Boost Your Online Store
+                        </a>
+                        <p class="bg-[#484848] font-semibold text-xs rounded-[4px] p-[4px_6px] w-fit">
+                            Template
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-[6px]">
+                        <div class="w-10 h-10 overflow-hidden border border-gray-200 rounded-full">
+                            <img src="/dist/image/sempel5.jpg" class="object-cover w-full h-full rounded-full" alt="logo">
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-gray-200">Shopify</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Kartu 3 -->
+            <div class="product-card flex flex-col rounded-[18px] bg-[#232323] border-2 border-transparent shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer focus:border-blue-500 outline-none"
+                tabindex="0" data-aos="fade-up" data-aos-duration="1000">
+                <a href="details.html" class="thumbnail w-full h-[180px] sm:h-[220px] md:h-[240px] lg:h-[260px] flex shrink-0 overflow-hidden relative rounded-[18px]">
+                    <img src="/dist/image/sempel3.png" class="object-cover w-full h-full rounded-[18px]" alt="thumbnail">
+                    <p class="backdrop-blur bg-white/30 text-white rounded-[4px] p-[4px_8px] absolute top-3 right-[14px] z-10">
+                        Rp 159,000
+                    </p>
+                </a>
+                <div class="p-[10px_14px_12px] flex flex-col justify-between gap-[14px]">
+                    <div class="flex flex-col gap-1">
+                        <a href="details.html" class="font-semibold line-clamp-2 hover:line-clamp-none">
+                            Portfolio Website Template: Showcase Your Work
+                        </a>
+                        <p class="bg-[#484848] font-semibold text-xs rounded-[4px] p-[4px_6px] w-fit">
+                            Template
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-[6px]">
+                        <div class="w-10 h-10 overflow-hidden border border-gray-200 rounded-full">
+                            <img src="/dist/image/sempel3.png" class="object-cover w-full h-full rounded-full" alt="logo">
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-gray-200">WordPress</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Kartu 4 -->
+            <div class="product-card flex flex-col rounded-[18px] bg-[#232323] border-2 border-transparent shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer focus:border-blue-500 outline-none"
+                tabindex="0" data-aos="fade-up" data-aos-duration="1000">
+                <a href="details.html" class="thumbnail w-full h-[180px] sm:h-[220px] md:h-[240px] lg:h-[260px] flex shrink-0 overflow-hidden relative rounded-[18px]">
+                    <img src="/dist/image/sempel4.jpeg" class="object-cover w-full h-full rounded-[18px]" alt="thumbnail">
+                    <p class="backdrop-blur bg-white/30 text-white rounded-[4px] p-[4px_8px] absolute top-3 right-[14px] z-10">
+                        Rp 169,000
+                    </p>
+                </a>
+                <div class="p-[10px_14px_12px] flex flex-col justify-between gap-[14px]">
+                    <div class="flex flex-col gap-1">
+                        <a href="details.html" class="font-semibold line-clamp-2 hover:line-clamp-none">
+                            Blog Template: Easy to Customize
+                        </a>
+                        <p class="bg-[#484848] font-semibold text-xs rounded-[4px] p-[4px_6px] w-fit">
+                            Template
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-[6px]">
+                        <div class="w-10 h-10 overflow-hidden border border-gray-200 rounded-full">
+                            <img src="/dist/image/sempel4.jpeg" class="object-cover w-full h-full rounded-full" alt="logo">
+                        </div>
+                        <a href="#" class="text-xs font-semibold text-gray-200">Jekyll</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end -->
+     
+     <!-- footer -->
+     <footer class="w-full">
+         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+             <div class="py-20">
+             <a href="https://pagedone.io/" class="flex justify-center ">
+                <img src="/dist/backgrond/dev.png" alt="">
+             </a>
+             <div class="py-8 text-center">
+                 <h3 class="mb-4 text-3xl font-bold text-white font-manrope">Having revenue problem? We’ve got skills.</h3>
+                 <p class="text-gray-300">Joined over 400+ startups already growing with pagedone. what's holding you back?</p>
+             </div> 
+             
+             </div>
+             <div class="border-t border-gray-200 py-7">
+                 <div class="flex flex-col items-center justify-center gap-7 lg:justify-between lg:flex-row">
+                     <span class="text-sm text-gray-500 ">©<a href="https://pagedone.io/"> Devcount</a> 2024, All rights reserved.</span>
+                 </div>
+             </div>
+         </div>
+     </footer>
+      <!-- end -->
+
+    
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            menuButton.addEventListener('click', (event) => {
+                event.stopPropagation(); 
+                dropdownMenu.classList.toggle('hidden');
+            });
+            document.addEventListener('click', (event) => {
+                if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
